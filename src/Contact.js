@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, LayoutDashboard } from 'lucide-react';
 import VideoBackground from './VideoBackground';
 import { submitContactForm } from './services/api';
+import AdminDashboard from './AdminDashboard';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ const Contact = () => {
     });
     const [loading, setLoading] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const [showDashboard, setShowDashboard] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -87,6 +89,23 @@ const Contact = () => {
                                 <h4>Visit Us</h4>
                                 <p>123 Mojaffornagar</p>
                                 <p>Chittagong, Bangladesh</p>
+                                <button
+                                    onClick={() => setShowDashboard(true)}
+                                    className="dashboard-link-btn"
+                                    style={{
+                                        marginTop: '0.75rem',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '0.5rem',
+                                        color: 'var(--secondary)',
+                                        fontWeight: 600,
+                                        fontSize: '0.9rem',
+                                        background: 'none',
+                                        padding: 0
+                                    }}
+                                >
+                                    <LayoutDashboard size={16} /> View Dashboard
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -142,7 +161,7 @@ const Contact = () => {
                                 <label>Message *</label>
                                 <textarea
                                     name="message"
-                                    rows="5"
+                                    rows="3"
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
@@ -157,6 +176,10 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+
+            {showDashboard && (
+                <AdminDashboard onClose={() => setShowDashboard(false)} />
+            )}
         </section>
     );
 };

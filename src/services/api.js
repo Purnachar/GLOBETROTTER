@@ -32,4 +32,9 @@ export const submitContactForm = async (formData) => {
     return response.data;
 };
 
+export const getContactMessages = async () => {
+    const response = await api.get('/contact');
+    return response.data;
+};
+
 export default api;

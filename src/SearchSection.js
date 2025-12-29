@@ -51,10 +51,15 @@ const SearchSection = ({ onSearch }) => {
                             </select>
                         </div>
 
-                        <button className="btn btn-primary btn-search" onClick={handleSearch}>
-                            <Search size={20} />
-                            Search
-                        </button>
+                        <div className="search-field">
+                            <label style={{ visibility: 'hidden' }}>
+                                <span>&nbsp;</span>
+                            </label>
+                            <button className="btn btn-primary btn-search" onClick={handleSearch}>
+                                <Search size={20} />
+                                Search
+                            </button>
+                        </div>
                     </div>
 
                     <div className="quick-filters">

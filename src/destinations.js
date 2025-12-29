@@ -1,6 +1,4 @@
-
-export const destinations = [
-    {
+export const destinations = [{
         id: 1,
         name: "Cox's Bazar",
         district: "Cox's Bazar District",
@@ -10,8 +8,7 @@ export const destinations = [
         category: "Beach & Coast",
         description: "The longest natural sea beach in the world, stretching over 120km with pristine golden sands.",
         tips: ["Best time to visit: Nov-Feb", "Try local seafood", "Visit Himchari waterfall"],
-        accommodations: [
-            {
+        accommodations: [{
                 name: "Sea Pearl Beach Resort",
                 type: "Luxury Resort",
                 image: "https://lh3.googleusercontent.com/p/AF1QipOfK9qFv4f7VCIXvJldDd-URXIjTLJAldomtfAM=s1360-w1360-h1020-rw",
@@ -83,8 +80,7 @@ export const destinations = [
         category: "Hills & Mountains",
         description: "A paradise for nature lovers with majestic mountains, waterfalls, and indigenous tribal culture.",
         tips: ["Hire a local guide", "Carry trekking shoes", "Respect local culture"],
-        accommodations: [
-            {
+        accommodations: [{
                 name: "Sairu Hill Resort",
                 type: "Hill Resort",
                 image: "https://lh3.googleusercontent.com/p/AF1QipOkUZRl5tsHhQXW1Hn7mVqerzp4f1kjdp1ODIGr=s1360-w1360-h1020-rw",
@@ -176,8 +172,7 @@ export const destinations = [
         category: "Nature & Lakes",
         description: "The lake city featuring Kaptai Lake, hanging bridges, and peaceful boat rides through scenic valleys.",
         tips: ["Take a boat ride", "Visit Shuvolong Waterfall", "Buy handmade textiles"],
-        accommodations: [
-            {
+        accommodations: [{
                 name: "Aronnoko Holiday Resort",
                 type: "Lake Resort",
                 image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzk58nzFq1U1EQzBxhOOgl8pSvRIK8R8KD0Tim_X1L8XsavG8pbMXArVCGN_fP8XlVZ9PqovBGmM-va9Me685Zu3tnRQI2wf3nf_TRmVIYD3wMaK32K-7aojQkNnLrxIh--VnbQIQ=s1360-w1360-h1020-rw",
@@ -249,8 +244,7 @@ export const destinations = [
         category: "Urban & Cultural",
         description: "The port city offering a blend of urban attractions, historical sites, beaches, and hilltop viewpoints.",
         tips: ["Visit Patenga Beach", "Explore Foy's Lake", "See the WWII Cemetery", "Enjoy local street food"],
-        accommodations: [
-            {
+        accommodations: [{
                 name: "Radisson Blu Bay View",
                 type: "Luxury Hotel",
                 image: "https://lh3.googleusercontent.com/p/AF1QipPitHyYLqdmbwNK_aV6gjrCMKLk9hgV_RQ9vD6o=s1360-w1360-h1020-rw",
@@ -322,8 +316,7 @@ export const destinations = [
         category: "Island & Reef",
         description: "Bangladesh's only coral island, famous for its crystal clear blue water and coconut groves.",
         tips: ["Book ship tickets early", "Try fresh sea fish", "Visit Chera Dwip"],
-        accommodations: [
-            {
+        accommodations: [{
                 name: "Blue Marine Resort",
                 type: "Island Resort",
                 image: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwwcsDia9wszg6fL314Np_3xm1UzwZEc0qL6A7PKA-w-CnHOu74vCpU9sKozamLm7lgeJWvVxCJOwftuDx6Lc7PgrzJNQsn2slZZKlOtKP1JsslVGQgHhhJBz8OEu89xA8ZRvFn4A=s1360-w1360-h1020-rw",
@@ -395,8 +388,7 @@ export const destinations = [
         category: "Hills & Caves",
         description: "Known for Alutila Cave, Risang Waterfall, and rolling green hills.",
         tips: ["Carry light sources for caves", "Try bamboo chicken", "Visit Richang Waterfall"],
-        accommodations: [
-            {
+        accommodations: [{
                 name: "Parjatan Motel",
                 type: "Motel",
                 image: "https://lh3.googleusercontent.com/p/AF1QipM5iqb_TjG99nq0AJTSDXLYyvlPm0d5N_8W9sb1=s1360-w1360-h1020-rw",

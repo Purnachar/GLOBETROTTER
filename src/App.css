@@ -1182,6 +1182,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    height: 100%;
 }
 
 .info-card {
@@ -1192,6 +1193,7 @@ section {
     display: flex;
     gap: 1rem;
     box-shadow: var(--shadow-soft);
+    flex: 1;
 }
 
 .info-icon {
