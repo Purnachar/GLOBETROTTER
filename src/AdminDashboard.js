@@ -13,7 +13,8 @@ const AdminDashboard = ({ onClose }) => {
                 const data = await getContactMessages();
                 setMessages(data);
             } catch (err) {
-                setError('Failed to fetch messages. Please ensure the backend is running.');
+                const apiUrl = err.config?.baseURL || 'unknown URL';
+                setError(`Failed to fetch messages. Please ensure the backend is running. Attempted to connect to: ${apiUrl}`);
                 console.error(err);
             } finally {
                 setLoading(false);
