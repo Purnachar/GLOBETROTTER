@@ -1,6 +1,19 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const getBaseUrl = () => {
+    let url = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+    // Remove trailing slash if present to avoid double slashes
+    if (url.endsWith('/')) {
+        url = url.slice(0, -1);
+    }
+    // Append /api if not present
+    if (!url.endsWith('/api')) {
+        url += '/api';
+    }
+    return url;
+};
+
+const API_BASE_URL = getBaseUrl();
 
 const api = axios.create({
     baseURL: API_BASE_URL,

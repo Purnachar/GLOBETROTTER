@@ -16,9 +16,32 @@ connectDB();
 
 // Middleware
 const corsOptions = {
-    origin: process.env.NODE_ENV === 'production'
-        ? [process.env.FRONTEND_URL, 'https://globetrotter-frontend.onrender.com']
-        : '*',
+    origin: (origin, callback) => {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+
+        // Define allowed origins
+        const allowedOrigins = [
+            process.env.FRONTEND_URL,
+            'http://localhost:3000',
+            /^https:\/\/globetrotter-frontend.*\.onrender\.com$/
+        ];
+
+        // Check if the origin is allowed
+        const isAllowed = allowedOrigins.some(allowed => {
+            if (allowed instanceof RegExp) {
+                return allowed.test(origin);
+            }
+            return allowed === origin;
+        });
+
+        if (isAllowed) {
+            callback(null, true);
+        } else {
+            console.log('Blocked by CORS:', origin);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true,
 };
 app.use(cors(corsOptions));

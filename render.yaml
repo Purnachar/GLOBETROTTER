@@ -28,7 +28,10 @@ services:
     staticPublishPath: ./build
     envVars:
       - key: REACT_APP_API_URL
-        sync: false
+        fromService:
+          type: web
+          name: globetrotter-backend
+          envVarKey: RENDER_EXTERNAL_URL
     routes:
       - type: rewrite
         source: /*
